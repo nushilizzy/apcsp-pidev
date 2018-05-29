@@ -1,6 +1,12 @@
 #include <stdio.h>
 
-
+void arrayAdd(int arr[], int s, int n){
+	for (int i = 0; i < s; i++)
+	  {
+	    arr[i] = arr[i] +n;
+	    printf("%d\n", arr[i]); 
+	  }
+}
 
 
 int main()
@@ -12,18 +18,6 @@ int main()
   {
     arr[i] = i * i;
   }
-
-  printf("1st and 3rd vals: %d, %d\n", arr[0], arr[2]);
-  
-  printf("Or %d, %d\n", *arr, *(arr+2));
-
-  
-  // create array to hold intialized values
-  int arr2[] = { 1, 2, 3, 4 };
-  for (int i = 0; i < 4; i++)
-  {
-    printf("%d, ", arr2[i]);
-  }
-  printf("\n");
-  
+  arrayAdd(arr, 100, 2);
 }
+
